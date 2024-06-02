@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Events from "./pages/Events";
-import EventInfo from "./pages/EventInfo";
+import Events from "./pages/Events/Events";
+import EventInfo from "./pages/EventInfo/EventInfo";
 
 const App = () => {
   return (

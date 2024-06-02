@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 
 //MUI
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 //Files
-import Navbar from "../layouts/Navbar";
-import Main from "../layouts/Main";
-import Footer from "../layouts/Footer";
+import Navbar from "./layouts/Navbar";
+import Main from "./layouts/Main";
+import Footer from "./layouts/Footer";
+import Loading from "../../components/Loading";
 
 //axios
 import axios from "axios";
-import Loading from "../components/Loading";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -30,11 +31,11 @@ const Events = () => {
   }, []);
 
   return (
-    <Container disableGutters maxWidth="false">
+    <Box>
       <Navbar />
       {events.length < 1 ? <Loading /> : <Main events={events} />}
       {/* <Footer /> */}
-    </Container>
+    </Box>
   );
 };
 
