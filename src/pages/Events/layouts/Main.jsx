@@ -11,7 +11,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 
 const Main = ({ events }) => {
   return (
-    <Box sx={{ py: 2, px: 3 }}>
+    <Box sx={{ py: 2 }}>
       <Container maxWidth="lg">
         {events
           .filter((event) => {

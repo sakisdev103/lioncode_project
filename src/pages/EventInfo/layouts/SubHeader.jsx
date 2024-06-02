@@ -7,7 +7,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
 const SubHeader = () => {
-  const [value, setValue] = useState("one");
+  const [value, setValue] = useState("1");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -23,10 +23,10 @@ const SubHeader = () => {
             indicatorColor="secondary"
             aria-label="tabs"
           >
-            <Tab value="one" label="SCHEDULE" />
-            <Tab value="two" label="TAB1" />
-            <Tab value="three" label="TAB2" />
-            <Tab value="four" label="TAB3" />
+            <Tab value="1" label="SCHEDULE" />
+            <Tab value="2" label="TAB1" disabled />
+            <Tab value="3" label="TAB2" disabled />
+            <Tab value="4" label="TAB3" disabled />
           </Tabs>
         </Box>
       </Container>

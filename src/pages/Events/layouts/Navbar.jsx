@@ -5,7 +5,7 @@ import logo from "../../../assets/lioncode-logo-custom.png";
 
 const Navbar = () => {
   return (
-    <Box sx={{ backgroundColor: "background.paper", py: 2, px: 3 }}>
+    <Box sx={{ backgroundColor: "background.paper", py: 2 }}>
       <Container maxWidth="lg">
         <img src={logo} alt="icon" />
       </Container>

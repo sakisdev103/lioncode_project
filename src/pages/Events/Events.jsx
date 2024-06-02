@@ -7,13 +7,14 @@ import Box from "@mui/material/Box";
 //Files
 import Navbar from "./layouts/Navbar";
 import Main from "./layouts/Main";
-import Footer from "./layouts/Footer";
+import Footer from "../layouts/Footer";
 import Loading from "../../components/Loading";
 
 //axios
 import axios from "axios";
 
 const Events = () => {
+  const isOnMainPage = true;
   const [events, setEvents] = useState([]);
 
   const fetchApi = async (url, params = {}) => {
@@ -34,7 +35,7 @@ const Events = () => {
     <Box>
       <Navbar />
       {events.length < 1 ? <Loading /> : <Main events={events} />}
-      {/* <Footer /> */}
+      <Footer flag={isOnMainPage} />
     </Box>
   );
 };
