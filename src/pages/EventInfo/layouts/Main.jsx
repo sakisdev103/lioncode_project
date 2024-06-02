@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useGlobalContext } from "../EventInfo";
 //Files
 import Accordion from "../../../components/Accordion";
 
@@ -7,11 +7,12 @@ import Accordion from "../../../components/Accordion";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 
-const Main = ({ state }) => {
+const Main = () => {
+  const { topics } = useGlobalContext();
   return (
     <Box sx={{ py: 2, mb: 3 }}>
       <Container maxWidth="lg">
-        {state.map((event) => {
+        {topics.map((event) => {
           const { topic_name, topic_content } = event;
           return (
             <Box key={topic_name}>

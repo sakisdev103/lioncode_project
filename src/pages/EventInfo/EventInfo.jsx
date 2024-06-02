@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 //Files
@@ -10,17 +10,23 @@ import Main from "./layouts/Main";
 import Box from "@mui/material/Box";
 import Footer from "../layouts/Footer";
 
+const GlobalContext = createContext();
+export const useGlobalContext = () => useContext(GlobalContext);
+
 const EventInfo = () => {
   const isOnMainPage = false;
   const { state } = useLocation();
+  const [topics, setTopics] = useState(state);
   console.log(state);
   return (
-    <Box>
-      <Header />
-      <SubHeader />
-      <Main state={state} />
-      <Footer flag={isOnMainPage} />
-    </Box>
+    <GlobalContext.Provider value={{ topics, setTopics }}>
+      <Box>
+        <Header />
+        <SubHeader />
+        <Main />
+        <Footer flag={isOnMainPage} />
+      </Box>
+    </GlobalContext.Provider>
   );
 };
 
