@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
 
 //Files
 import Modal from "../../../components/Modal";
@@ -26,7 +27,13 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <IconButton aria-label="back" size="large" color="primary" href="/">
+          <IconButton
+            aria-label="back"
+            size="large"
+            color="primary"
+            component={RouterLink}
+            to="/"
+          >
             <ChevronLeftIcon />
           </IconButton>
           <IconButton
