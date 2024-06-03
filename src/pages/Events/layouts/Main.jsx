@@ -14,7 +14,11 @@ const Main = ({ events, setEvents }) => {
   return (
     <Box sx={{ py: 2 }}>
       <Container maxWidth="lg">
-        <Reorder.Group values={events} onReorder={setEvents}>
+        <Reorder.Group
+          values={events}
+          onReorder={setEvents}
+          style={{ padding: 0 }}
+        >
           {events
             .filter((event) => {
               if (event.is_inclass === true) {
@@ -22,7 +26,7 @@ const Main = ({ events, setEvents }) => {
               }
             })
             .map((event) => {
-              // console.log(event);
+              console.log(event);
               const { topics, date } = event;
               const { id, title, event_info1 } = event.event;
               return (
