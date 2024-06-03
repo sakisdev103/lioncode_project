@@ -32,10 +32,14 @@ const Events = () => {
   }, []);
 
   return (
-    <Box>
-      <Navbar />
-      {events.length < 1 ? <Loading /> : <Main events={events} />}
-      <Footer flag={isOnMainPage} />
+    <Box sx={{ position: "relative", minHeight: "100vh" }}>
+      <Box sx={{ pb: 12 }}>
+        <Navbar />
+        {events.length < 1 ? <Loading /> : <Main events={events} />}
+      </Box>
+      <Box sx={{ height: 12 }}>
+        <Footer flag={isOnMainPage} />
+      </Box>
     </Box>
   );
 };

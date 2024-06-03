@@ -25,12 +25,16 @@ const EventInfo = () => {
     <GlobalContext.Provider
       value={{ topics, setTopics, state, search, setSearch }}
     >
-      <Box>
-        <Header />
-        <SubHeader />
-        {search !== "" && <Filter />}
-        <Main />
-        <Footer flag={isOnMainPage} />
+      <Box sx={{ position: "relative", minHeight: "100vh" }}>
+        <Box sx={{ pb: 12 }}>
+          <Header />
+          <SubHeader />
+          {search !== "" && <Filter />}
+          <Main />
+        </Box>
+        <Box sx={{ height: 12 }}>
+          <Footer flag={isOnMainPage} />
+        </Box>
       </Box>
     </GlobalContext.Provider>
   );
