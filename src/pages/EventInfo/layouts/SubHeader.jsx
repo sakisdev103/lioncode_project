@@ -9,6 +9,7 @@ import Tab from "@mui/material/Tab";
 const SubHeader = () => {
   const [value, setValue] = useState("1");
 
+  //Function to detect when user clicks on the other tabs. Right now we don't have content about the other tabs so i set them as disabled. If we want to display content based on selected tab we need to add some more functionallity to display the data dynamic about each page.
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

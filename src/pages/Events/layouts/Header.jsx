@@ -1,9 +1,13 @@
 import React from "react";
+
+//MUI
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+
+//Logo
 import logo from "../../../assets/lioncode-logo-custom.png";
 
-const Navbar = () => {
+const Header = () => {
   return (
     <Box sx={{ backgroundColor: "background.paper", py: 2 }}>
       <Container maxWidth="lg">
@@ -13,4 +17,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "../pages/EventInfo/EventInfo";
 
 //Files
@@ -8,8 +8,9 @@ import Search from "./Search";
 import Dialog from "@mui/material/Dialog";
 
 const Modal = ({ open, setOpen }) => {
-  const { topics, setTopics, state, search } = useGlobalContext();
+  const { topics, setTopics, state, search } = useGlobalContext(); //Retrieving data
 
+  //Function for searching topics
   const handleSearch = (e) => {
     e.preventDefault();
     if (search !== "") {
@@ -20,8 +21,7 @@ const Modal = ({ open, setOpen }) => {
           }
         })
       );
-    }
-    if (search === "") {
+    } else {
       setTopics(state);
     }
     setOpen(false);

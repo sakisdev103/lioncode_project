@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../EventInfo";
+
 //Files
 import Accordion from "../../../components/Accordion";
 
@@ -9,8 +10,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 const Main = () => {
-  const { topics } = useGlobalContext();
-  // console.log(topics);
+  const { topics } = useGlobalContext(); //Retrieving data
   return (
     <Box sx={{ py: 2, mb: 3 }}>
       <Container maxWidth="lg">

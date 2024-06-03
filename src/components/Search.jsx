@@ -11,7 +11,7 @@ import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 
 const SearchComponent = ({ handleSearch }) => {
-  const { search, setSearch } = useGlobalContext();
+  const { search, setSearch } = useGlobalContext(); //Retrieving data
   return (
     <Paper
       component="form"

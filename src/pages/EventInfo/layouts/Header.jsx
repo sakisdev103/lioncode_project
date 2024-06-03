@@ -15,6 +15,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const Header = () => {
+  //For modal functionallity
   const [open, setOpen] = useState(false);
   const toggleModal = () => {
     setOpen(!false);

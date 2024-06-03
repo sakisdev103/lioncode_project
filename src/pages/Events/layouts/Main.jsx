@@ -14,6 +14,7 @@ const Main = ({ events, setEvents }) => {
   return (
     <Box sx={{ py: 2 }}>
       <Container maxWidth="lg">
+        {/* Wrapping the content in which we want to change the order */}
         <Reorder.Group
           values={events}
           onReorder={setEvents}
@@ -26,7 +27,6 @@ const Main = ({ events, setEvents }) => {
               }
             })
             .map((event, index) => {
-              // console.log(index);
               const { topics, date } = event;
               const { id, title, event_info1 } = event.event;
               return (
