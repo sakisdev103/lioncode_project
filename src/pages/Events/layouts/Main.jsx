@@ -25,8 +25,8 @@ const Main = ({ events, setEvents }) => {
                 return event;
               }
             })
-            .map((event) => {
-              console.log(event);
+            .map((event, index) => {
+              // console.log(index);
               const { topics, date } = event;
               const { id, title, event_info1 } = event.event;
               return (
@@ -41,6 +41,7 @@ const Main = ({ events, setEvents }) => {
                     event_info1={event_info1}
                     date={date}
                     topics={topics}
+                    index={index}
                   />
                 </Reorder.Item>
               );

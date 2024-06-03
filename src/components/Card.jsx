@@ -14,9 +14,15 @@ import PlaceIcon from "@mui/icons-material/Place";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 
-const Cards = ({ id, title, event_info1, date, topics }) => {
+const Cards = ({ id, title, event_info1, date, topics, index }) => {
   return (
-    <Card sx={{ backgroundColor: "common.white", my: 3 }}>
+    <Card
+      sx={{
+        backgroundColor: "common.white",
+        my: 3,
+        borderLeft: `${index === 0 && "5px solid #687487"}`,
+      }}
+    >
       <CardContent>
         <Stack
           direction="row"

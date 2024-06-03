@@ -18,15 +18,7 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          borderLeft: "5px solid #687487",
-        },
-      },
-    },
-
-    MuiBottomNavigationAction: {
-      styleOverrides: {
-        root: {
-          color: "#707070",
+          borderLeft: "5px solid #c5c5c5",
         },
       },
     },
