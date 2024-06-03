@@ -1,8 +1,6 @@
-
 # Events
 
 A simple application to display events and information about them.
-
 
 ## Table of Contents
 
@@ -10,8 +8,6 @@ A simple application to display events and information about them.
 - [Installation](#installation)
 - [Technologies](#technologies)
 - [Usage](#usage)
-
-
 
 ## Features
 
@@ -21,41 +17,40 @@ A simple application to display events and information about them.
 - **Change the Order of Cards**: Customize the display order of event cards.
 - **Elegant Appearance**: Clean and modern design.
 
-
-
 ## Installation
 
 1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/sakisdev103/lioncode_project.git
-    ```
+   ```bash
+   git clone https://github.com/sakisdev103/lioncode_project.git
+   ```
 2. **Navigate to the project directory**:
-    ```bash
-    cd events
-    ```
+   ```bash
+   cd lioncode_project
+   ```
 3. **Install the dependencies**:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 4. **Start the application**:
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
-    
 ## Technologies
 
 This project utilizes the following technologies:
 
 - **HTML**: For structuring the web content.
-- **MUI (Material-UI)**: For implementing the user interface with pre-designed components.
+- **MUI (Material-UI)**: For implementing the user interface.
 - **JavaScript**: For adding interactive elements to the web application.
 - **ReactJS**: For building the user interface and managing the application state.
+
 ## Usage
 
 #### 1. Open your browser and navigate to `http://localhost:5173/` to view the application.
+
 #### 2. Use the search bar to find specific events.
+
 #### 3. Interact with event cards to see detailed information.
+
 #### 4. Change the order of the event cards using the provided controls.
-
-
