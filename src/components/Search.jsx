@@ -1,4 +1,5 @@
 import React from "react";
+import { useGlobalContext } from "../pages/EventInfo/EventInfo";
 
 //MUI
 import Paper from "@mui/material/Paper";
@@ -9,7 +10,8 @@ import IconButton from "@mui/material/IconButton";
 //Icons
 import SearchIcon from "@mui/icons-material/Search";
 
-const Search = ({ search, setSearch, handleSearch }) => {
+const SearchComponent = ({ handleSearch }) => {
+  const { search, setSearch } = useGlobalContext();
   return (
     <Paper
       component="form"
@@ -36,4 +38,4 @@ const Search = ({ search, setSearch, handleSearch }) => {
   );
 };
 
-export default Search;
+export default SearchComponent;

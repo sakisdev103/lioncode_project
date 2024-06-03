@@ -6,23 +6,31 @@ import Accordion from "../../../components/Accordion";
 //MUI
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const Main = () => {
   const { topics } = useGlobalContext();
+  // console.log(topics);
   return (
     <Box sx={{ py: 2, mb: 3 }}>
       <Container maxWidth="lg">
-        {topics.map((event) => {
-          const { topic_name, topic_content } = event;
-          return (
-            <Box key={topic_name}>
-              <Accordion
-                topic_name={topic_name}
-                topic_content={topic_content}
-              />
-            </Box>
-          );
-        })}
+        {topics.length > 0 ? (
+          topics.map((event) => {
+            const { topic_name, topic_content } = event;
+            return (
+              <Box key={topic_name}>
+                <Accordion
+                  topic_name={topic_name}
+                  topic_content={topic_content}
+                />
+              </Box>
+            );
+          })
+        ) : (
+          <Typography component="div" variant="h5" align="center">
+            Didn't find any event.
+          </Typography>
+        )}
       </Container>
     </Box>
   );
