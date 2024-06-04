@@ -1,53 +1,28 @@
-import React, { useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import React, { useState, useContext, createContext } from "react";
+import { useGlobalContext } from "../EventInfo";
 
 //Files
-import Modal from "../../../components/Modal";
+import Navigation from "./Navigation";
+import SubHeader from "./SubHeader";
+import Filter from "../../../components/Filter";
 
 //MUI
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
 
-//Icons
-import SearchIcon from "@mui/icons-material/Search";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+//Setting up context api
+const GlobalSearch = createContext();
+export const useGlobalSearch = () => useContext(GlobalSearch);
 
 const Header = () => {
-  //For modal functionallity
-  const [open, setOpen] = useState(false);
-  const toggleModal = () => {
-    setOpen(!false);
-  };
+  const { state, topics } = useGlobalContext(); //Retrieving data
+  const [search, setSearch] = useState(""); //For search functionallity
   return (
-    <Box sx={{ backgroundColor: "background.paper", py: 2 }}>
-      <Container maxWidth="lg">
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <IconButton
-            aria-label="back"
-            size="large"
-            color="primary"
-            component={RouterLink}
-            to="/"
-          >
-            <ChevronLeftIcon />
-          </IconButton>
-          <IconButton
-            aria-label="search"
-            size="large"
-            color="primary"
-            onClick={toggleModal}
-          >
-            <SearchIcon />
-          </IconButton>
-        </Stack>
-      </Container>
-      {open && <Modal open={open} setOpen={setOpen} />}
+    <Box>
+      <GlobalSearch.Provider value={{ search, setSearch }}>
+        <Navigation />
+        <SubHeader />
+        {topics.length > 0 && state.length !== topics.length && <Filter />}
+      </GlobalSearch.Provider>
     </Box>
   );
 };

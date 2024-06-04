@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../pages/EventInfo/EventInfo";
+import { useGlobalSearch } from "../pages/EventInfo/layouts/Header";
 
 //MUI
 import Paper from "@mui/material/Paper";
@@ -10,8 +11,26 @@ import IconButton from "@mui/material/IconButton";
 //Icons
 import SearchIcon from "@mui/icons-material/Search";
 
-const SearchComponent = ({ handleSearch }) => {
-  const { search, setSearch } = useGlobalContext(); //Retrieving data
+const SearchComponent = ({ setOpen }) => {
+  const { setTopics, state } = useGlobalContext();
+  const { search, setSearch } = useGlobalSearch();
+
+  //Function for searching topics
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search !== "") {
+      setTopics(
+        state.filter((item) => {
+          if (item.topic_name.includes(search)) {
+            return item;
+          }
+        })
+      );
+    } else {
+      setTopics([]);
+    }
+    setOpen(false);
+  };
   return (
     <Paper
       component="form"
@@ -24,6 +43,7 @@ const SearchComponent = ({ handleSearch }) => {
       onSubmit={handleSearch}
     >
       <InputBase
+        id="searchbar"
         sx={{ ml: 1, flex: 1, color: "primary" }}
         placeholder="Search event"
         inputProps={{ "aria-label": "search event" }}
