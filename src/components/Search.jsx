@@ -3,10 +3,7 @@ import { useGlobalContext } from "../pages/EventInfo/EventInfo";
 import { useGlobalSearch } from "../pages/EventInfo/layouts/Header";
 
 //MUI
-import Paper from "@mui/material/Paper";
-import InputBase from "@mui/material/InputBase";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
+import { Paper, InputBase, Divider, IconButton } from "@mui/material";
 
 //Icons
 import SearchIcon from "@mui/icons-material/Search";

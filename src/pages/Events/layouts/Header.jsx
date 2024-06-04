@@ -1,8 +1,7 @@
 import React from "react";
 
 //MUI
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import { Box, Container } from "@mui/material";
 
 //Logo
 import logo from "../../../assets/lioncode-logo-custom.png";

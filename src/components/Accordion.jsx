@@ -1,20 +1,22 @@
 import React from "react";
 
 //MUI
-import Box from "@mui/material/Box";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Tooltip from "@mui/material/Tooltip";
+import {
+  Box,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  Grid,
+  Stack,
+  Tooltip,
+} from "@mui/material";
 
 //Icons
 import PersonIcon from "@mui/icons-material/Person";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Accordions = ({ topic_name, topic_content }) => {
   return (

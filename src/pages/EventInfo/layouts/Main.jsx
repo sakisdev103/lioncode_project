@@ -5,9 +5,7 @@ import { useGlobalContext } from "../EventInfo";
 import Accordion from "../../../components/Accordion";
 
 //MUI
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import { Container, Box, Typography } from "@mui/material";
 
 const Main = () => {
   const { topics } = useGlobalContext(); //Retrieving data

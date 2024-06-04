@@ -2,9 +2,7 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 
 //MUI
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import { Grid, Typography, Button } from "@mui/material";
 
 //Icons
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";

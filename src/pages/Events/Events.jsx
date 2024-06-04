@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-//MUI
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-
 //Files
 import Header from "./layouts/Header";
 import Main from "./layouts/Main";
 import Footer from "../layouts/Footer";
 import Loading from "../../components/Loading";
+
+//MUI
+import Box from "@mui/material/Box";
 
 //axios
 import axios from "axios";

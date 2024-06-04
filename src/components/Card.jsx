@@ -2,12 +2,14 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 
 //MUI
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Stack from "@mui/material/Stack";
-import CardActionArea from "@mui/material/CardActionArea";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import {
+  Card,
+  CardContent,
+  Stack,
+  CardActionArea,
+  Typography,
+  Grid,
+} from "@mui/material";
 
 //Icons
 import PlaceIcon from "@mui/icons-material/Place";

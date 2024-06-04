@@ -5,10 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 import Modal from "../../../components/Modal";
 
 //MUI
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
+import { Box, Container, Stack, IconButton } from "@mui/material";
 
 //Icons
 import SearchIcon from "@mui/icons-material/Search";

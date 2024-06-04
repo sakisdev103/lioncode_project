@@ -4,8 +4,7 @@ import React from "react";
 import Card from "../../../components/Card";
 
 //MUI
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import { Box, Container } from "@mui/material";
 
 //Framer
 import { Reorder } from "framer-motion";

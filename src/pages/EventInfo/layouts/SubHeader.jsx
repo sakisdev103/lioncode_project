@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 
 //MUI
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import { Box, Container, Tabs, Tab } from "@mui/material";
 
 const SubHeader = () => {
   const [value, setValue] = useState("1");

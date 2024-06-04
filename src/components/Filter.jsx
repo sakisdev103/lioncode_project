@@ -3,9 +3,7 @@ import { useGlobalContext } from "../pages/EventInfo/EventInfo";
 import { useGlobalSearch } from "../pages/EventInfo/layouts/Header";
 
 //MUI
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
+import { Box, Container, Button } from "@mui/material";
 
 const Filter = () => {
   const { state, setTopics } = useGlobalContext();
