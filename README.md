@@ -1,4 +1,4 @@
-# Events
+# Events App
 
 A simple application to display events and information about them.
 
@@ -47,10 +47,10 @@ This project utilizes the following technologies:
 
 ## Usage
 
-#### 1. Open your browser and navigate to `http://localhost:5173/` to view the application.
+1. Open your browser and navigate to `http://localhost:5173/` to view the application.
 
-#### 2. Use the search bar to find specific events.
+2. Change the order of the event cards using the provided controls.
 
-#### 3. Interact with event cards to see detailed information.
+3. Interact with event cards to see detailed information.
 
-#### 4. Change the order of the event cards using the provided controls.
+4. Use the search bar to find specific event topics.
