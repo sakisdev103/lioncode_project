@@ -13,8 +13,8 @@ A simple application to display events and information about them.
 
 - **Responsive Design**: Optimized for various screen sizes.
 - **Mobile Friendly**: Easily accessible on mobile devices.
-- **Search Events**: Quickly find specific events using the search functionality.
 - **Change the Order of Cards**: Customize the display order of event cards.
+- **Search Topics**: Quickly find specific event topics using the search functionality.
 - **Elegant Appearance**: Clean and modern design.
 
 ## Installation
