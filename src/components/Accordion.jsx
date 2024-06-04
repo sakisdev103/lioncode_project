@@ -9,12 +9,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
+import Tooltip from "@mui/material/Tooltip";
 
 //Icons
 import PersonIcon from "@mui/icons-material/Person";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import PlaceIcon from "@mui/icons-material/Place";
 
 const Accordions = ({ topic_name, topic_content }) => {
   return (
@@ -27,7 +27,7 @@ const Accordions = ({ topic_name, topic_content }) => {
       </AccordionSummary>
       <AccordionDetails sx={{ backgroundColor: "#fff" }}>
         {topic_content.lessons.map((item) => {
-          const { date, title, time_starts } = item;
+          const { date, title, time_starts, instructor } = item;
           return (
             <Box
               color="secondary"
@@ -64,7 +64,9 @@ const Accordions = ({ topic_name, topic_content }) => {
                   </Grid>
                 </Box>
                 <Typography component="div" align="right">
-                  <PersonIcon />
+                  <Tooltip title={instructor.name} placement="bottom-start">
+                    <PersonIcon />
+                  </Tooltip>
                 </Typography>
               </Stack>
             </Box>
